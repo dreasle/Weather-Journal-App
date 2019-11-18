@@ -3,9 +3,9 @@
 ## Table of Contents
 
 * [Overview](#overview)
-* [Project Environment Setup](#setup)
+* [Project Environment Setup](#project)
 * [APIs and Routes](#api)
-* [Dynamic UI](#ui)
+* [Dynamic UI](#dynamic)
 * [Tasks](#tasks)
 
 ## Overview
@@ -40,9 +40,9 @@ Create API credentials on OpenWeatherMap.com
 This is a list of tasks to complete the project
 
 #### Functionality/Required Tasks
-- [ ] Set up readme file
-- [ ] Do initial git commit
-- [ ] Create initial file structure
+- [x] Set up readme file
+- [x] Do initial git commit
+- [x] Create initial file structure
 - [ ] Install Node and Express on local machine
 - [ ] The project file server.js should require express(), and should create an instance of their app using express.
 - [ ] The Express app instance should be pointed to the project folder with .html, .css, and .js files.
@@ -59,10 +59,10 @@ This is a list of tasks to complete the project
 - [ ] You should be able to add an entry to the project endpoint using a POST route setup on the server side and executed on the client side as an asynchronous function.
 - [ ] The client side function should take two arguments, the URL to make a POST to, and an object holding the data to POST.
 - [ ] The server side function should create a new entry in the apps endpoint (the named JS object) consisting of the data received from the client side POST.
-- [ ] The input element with the placeholder property set to “enter zip code here” should have an id of zip.
-- [ ] The textarea included in project HTML should have an id of feelings.
-- [ ] The button included in project HTML should have an id of generate.
-- [ ] The div with the id, entryHolder should have three child divs with the ids: date, temp, content
+- [x] The input element with the placeholder property set to “enter zip code here” should have an id of zip.
+- [x] The textarea included in project HTML should have an id of feelings.
+- [x] The button included in project HTML should have an id of generate.
+- [x] The div with the id, entryHolder should have three child divs with the ids: date, temp, content
 - [ ] Adds an event listener to an existing HTML button from DOM using Vanilla JS.
 - [ ] In the file app.js, the element with the id of generate should have an addEventListener() method called on it, with click as the first parameter, and a named callback function as the second parameter.
 - [ ] Sets the properties of existing HTML elements from the DOM using Vanilla JavaScript.
