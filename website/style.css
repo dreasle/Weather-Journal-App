@@ -11,12 +11,14 @@
 
 /* Site-wide layout */
 * {
-    /* border: 1px red solid; */
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding-top: 40px;
 }
 
 .app {
@@ -25,13 +27,11 @@
     width: 450px;
     background: var(--background-color);
     display: grid;
-    /* align-items: center; */
     justify-content: center;
     border-radius: var(--border-radius);
 }
 
 .container {
-    /* background: var(--background-color); */
     text-align: center;
     padding-bottom: 40px;
     display: flex;
@@ -75,6 +75,5 @@ label {
 }
 
 .entry {
-    /* background: var(--primary-color); */
 }
 
