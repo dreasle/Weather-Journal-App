@@ -42,18 +42,16 @@ const getWeather = async (baseURL, zip, apiKey)=>{
 // Async POST request
 const updateData = async ( url = '', data = {})=>{
 
-    const response = await fetch(url, {
-        method: 'POST', 
-        credentials: 'same-origin', 
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
-    });
-
     try {
-        console.log("Post res:", response);
-    }catch(error) {
+        const response = await fetch(url, {
+            method: 'POST', 
+            credentials: 'same-origin', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+    } catch(error) {
         console.log("error", error);
     }
 };
@@ -61,14 +59,12 @@ const updateData = async ( url = '', data = {})=>{
 // Update the UI/HTML withe the server-side data obj.
 const updateUI = async () => {
   const request = await fetch('/all');
-  try{
+  try {
     const newData = await request.json();
     document.getElementById('date').innerHTML = `Date: ${newData.date}`;
     document.getElementById('temp').innerHTML = `Temp: ${newData.temp} F`;
     document.getElementById('content').innerHTML = `Feelings: ${newData.feelings}`;
-
-
-  }catch(error){
+  } catch(error) {
     console.log("error", error);
   }
 }
