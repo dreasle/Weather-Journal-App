@@ -21,12 +21,11 @@ function updateApp(e){
             temp: data.main.temp,
             feelings: feelings
         });
+    })
+    .then(function(data){
+        // Update the UI
+        updateUI();
     });
-    // .then(function(data){
-
-    // }
-
-
 }
 
 // Async GET request
@@ -53,24 +52,23 @@ const updateData = async ( url = '', data = {})=>{
     });
 
     try {
-    //   const newData = await response.json();
-    //   return newData;
         console.log("Post res:", response);
     }catch(error) {
         console.log("error", error);
     }
 };
 
+// Update the UI/HTML withe the server-side data obj.
+const updateUI = async () => {
+  const request = await fetch('/all');
+  try{
+    const newData = await request.json();
+    document.getElementById('date').innerHTML = `Date: ${newData.date}`;
+    document.getElementById('temp').innerHTML = `Temp: ${newData.temp} F`;
+    document.getElementById('content').innerHTML = `Feelings: ${newData.feelings}`;
 
-// const updateUI = async () => {
-//   const request = await fetch('/all');
-//   try{
-//     const allData = await request.json();
-//     document.getElementById('animalName').innerHTML = allData[0].animal;
-//     document.getElementById('animalFact').innerHTML = allData[0].facts;
-//     document.getElementById('animalFav').innerHTML = allData[0].fav;
 
-//   }catch(error){
-//     console.log("error", error);
-//   }
-// }
+  }catch(error){
+    console.log("error", error);
+  }
+}

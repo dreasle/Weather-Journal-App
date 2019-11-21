@@ -43,10 +43,6 @@ app.post('/save', updateData);
 function updateData (req, res) {
     console.log(req.body);
     projectData = req.body;
-    // projectData.date(req.body.date);
-    // projectData.temp(req.body.temp);
-    // projectData.content(req.body.content);
-    // // What does this do?
     res.end();
     console.log('updateData:', projectData);
 }

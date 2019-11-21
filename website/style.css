@@ -68,12 +68,10 @@ label {
     color: var(--text-hover-color);
 }
 
-.title {
-}
-
-.zip {
+h2 {
+    padding-bottom: 20px;
 }
 
 .entry {
+    padding-bottom: 20px;
 }
-
