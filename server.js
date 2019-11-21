@@ -38,21 +38,15 @@ function sendData (req, res) {
 }
 
 // POST route
-// // NOT SURE ABOUT the following
-// // is callBack necessary?
-// app.post('/all', callBack);
-
-// function callBack (req, res) {
-    // res.send('POST received');
-// }
-
-app.post('/updateData', updateData);
+app.post('/save', updateData);
 
 function updateData (req, res) {
     console.log(req.body);
-    projectData.date(req.body.date);
-    projectData.temp(req.body.temp);
-    projectData.content(req.body.content);
+    projectData = req.body;
+    // projectData.date(req.body.date);
+    // projectData.temp(req.body.temp);
+    // projectData.content(req.body.content);
     // // What does this do?
     res.end();
+    console.log('updateData:', projectData);
 }
